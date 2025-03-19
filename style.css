@@ -10,32 +10,26 @@ body, html {
 }
 
 
-.league-spartan-light {
+.league-spartan-light, .league-spartan-regular, .league-spartan-semi-bold, .league-spartan-bold {
     font-family: "League Spartan", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 300;
     font-style: normal;
+}
+
+.league-spartan-light {
+    font-weight: 300;
 }
 
 .league-spartan-regular {
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
 }
 
 .league-spartan-semi-bold {
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 600;
-    font-style: normal;
 }
 
 .league-spartan-bold {
-    font-family: "League Spartan", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
 }
 
 
@@ -57,7 +51,7 @@ button {
     letter-spacing: 2.5px;
     background: transparent;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
     &:hover {
         color: #000;
         background-color: #fff;
@@ -135,13 +129,13 @@ button {
             gap: 27px;
         }
         & h2 {
-            color: #000;
+            color: #242B37;
             font-size: 48px;
             line-height: 48px;
             letter-spacing: -0.5px;
         }
         & p {
-            color: #000;
+            color: #242B37;
             font-size: 20px;
             line-height: 30px;
             letter-spacing: 0px;
@@ -164,6 +158,9 @@ button {
 .place {
     & .restaurant_descr_img_wrap {
         margin-top: -70px;
+        & img {
+            box-shadow: 0px 1px 10px black;
+        }
     }
     & .restaurant_descr_wrap {
         margin-top: 177px;
@@ -178,13 +175,11 @@ button {
             gap: 27px;
         }
         & h2 {
-            color: #000;
             font-size: 48px;
             line-height: 48px;
             letter-spacing: -0.5px;
         }
         & p {
-            color: #000;
             font-size: 20px;
             line-height: 30px;
             letter-spacing: 0px;
@@ -341,8 +336,11 @@ button {
     }
     & .restaurant_descr_wrap {
         margin-top: 70px;
-        gap: 60px;
+        gap: 79px;
         & .restaurant_descr_text_wrap{
+            gap: 60px;
+        }
+        & div {
             gap: 19px;
         }
         & button {
@@ -363,11 +361,14 @@ button {
                 gap: 0;
                 & p{
                     cursor: pointer;
-                    color: #111;
+                    color: #4C4C4C;
                     font-size: 167x;
                     line-height: 28px;
                     letter-spacing: 2.5px;
                     opacity: 50%;
+                    &:hover {
+                        opacity: 100%;
+                    }
                 }
                 & div {
                     display: none;
@@ -427,7 +428,7 @@ footer {
     & .logotype {
         grid-column-start: 1;
     }
-    & .restaurant_info_city{
+    & .restaurant_info_city {
         grid-column-start: 4;
         grid-column-end: 7;
         & p {
@@ -436,10 +437,15 @@ footer {
             line-height: 28px;
             letter-spacing: 2px;
             color: #fff;
-            & a {
-                text-decoration: none;
-                color: #fff;
-            }
+        }
+        & a {
+            text-decoration: none;
+            color: #fff;
+            width: 100%;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
     }
     & .restaurant_info_time {
