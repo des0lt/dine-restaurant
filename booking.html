@@ -25,7 +25,50 @@
                 <h1 class="league-spartan-light">Reservations</h1>
                 <p class="league-spartan-regular">We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</p>   
             </article>
-            <article class="reservations_form"></article>
+            <form class="reservations_form">
+
+                <div class="filling-data">
+                    <input required class="league-spartan-regular" type="text" placeholder="Name">
+                    <input required class="league-spartan-regular" type="email" placeholder="Email">
+                </div>
+
+                <div class="date-picker">
+                    <label class="league-spartan-regular">Pick a date</label>
+                    <div class="date-picker_wrap">
+                        <input required type="text" placeholder="MM" maxlength="2">
+                        <input required type="text" placeholder="DD" maxlength="2">
+                        <input required type="text" placeholder="YYYY" maxlength="4">
+                    </div>
+                </div>
+
+                <div class="time-picker">
+                    <label class="league-spartan-regular">Pick a time</label>
+                    <div class="time-picker_wrap">
+                        <input required type="text" placeholder="09" maxlength="2">
+                        <input required type="text" placeholder="00" maxlength="2">
+                        <select>
+                            <option class="time-picker_option">AM</option>
+                            <option class="time-picker_option">PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="people-picker">
+                    <div class="people-picker_wrap">
+                        <button class="league-spartan-bold" id="decrease">-</button>
+                        <div>
+                            <span class="league-spartan-bold" id="people-count">4</span>
+                            <span class="league-spartan-bold"> people</span>
+                        </div>
+                        <button class="league-spartan-bold" id="increase">+</button>
+                    </div>
+                </div>
+
+                <button class="league-spartan-semi-bold booking_submit" id="booking_submit">
+                    BOOK TABLE
+                </button>
+
+            </form>
         </section>
         <section class="decorations">
             <div class="decorations_figure"></div>
@@ -33,7 +76,7 @@
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
         <article class="logotype">
             <a href="./index.html">
                 <img src="./images/logo.svg" alt="logotype dine">
@@ -50,6 +93,8 @@
             <time>MON - FRI: 09:00 AM - 10:00 PM</time><br>
             <time>SAT - SUN: 09:00 AM - 11:30 PM</time></p>
         </article>
-    </footer>
+    </footer> -->
+
+    <script src="script.js"></script>
 </body>
 </html>
