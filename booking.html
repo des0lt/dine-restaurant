@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman">
+    <meta name="description" content="Book a table in restaurant Dine">
+    <meta name="keywords" content="restaurant, tasty, dine, food, book, table">
+
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Dine Restaurant">
+    <meta property="og:url" content="https://des0lt.github.io/dine-restaurant/">
+    <meta property="og:image" content="./images/logo.svg">
+    <meta property="og:description" content="Restaurant Dine - one of the best restaurant in the world">
+    <meta property="business:contact_data:street_address" content="Four Lane Ends Marthwaite, Sedbergh LA10 5ES">
+    <meta property="business:contact_data:locality" content="Sedberg">
+    <meta property="business:contact_data:postal_code" content="06320">
+    <meta property="business:contact_data:country_name" content="United Kingdom of Great Britain and Northern Ireland">
+
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <title>Dine Booking</title>
     <link rel="stylesheet" href="./style.css">
@@ -11,40 +25,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header></header>
+<body class="league-spartan">
+    <!-- <header></header> -->
 
     <main>
         <section class="restaurant_descr reservations">
-            <article class="logo">
+            <header class="logo">
                 <a href="./index.html">
                     <img src="./images/logo.svg" alt="logotype dine">
                 </a>
-            </article>
+            </header>
             <article class="reservations_info">
                 <h1 class="league-spartan-light">Reservations</h1>
-                <p class="league-spartan-regular">We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</p>   
+                <p>We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</p>   
             </article>
             <form class="reservations_form">
 
                 <div class="filling-data">
-                    <input required class="league-spartan-regular" type="text" placeholder="Name">
-                    <input required class="league-spartan-regular" type="email" placeholder="Email">
+                    <input required type="text" placeholder="Name">
+                    <input required type="email" placeholder="Email">
                 </div>
 
                 <div class="date-picker">
-                    <label class="league-spartan-regular">Pick a date</label>
+                    <label for="date">Pick a date</label>
                     <div class="date-picker_wrap">
-                        <input required type="text" placeholder="MM" maxlength="2">
+                        <input id="date" required type="text" placeholder="MM" maxlength="2">
                         <input required type="text" placeholder="DD" maxlength="2">
                         <input required type="text" placeholder="YYYY" maxlength="4">
                     </div>
                 </div>
 
                 <div class="time-picker">
-                    <label class="league-spartan-regular">Pick a time</label>
+                    <label for="time">Pick a time</label>
                     <div class="time-picker_wrap">
-                        <input required type="text" placeholder="09" maxlength="2">
+                        <input id="time" required type="text" placeholder="09" maxlength="2">
                         <input required type="text" placeholder="00" maxlength="2">
                         <select>
                             <option class="time-picker_option">AM</option>
@@ -55,46 +69,23 @@
 
                 <div class="people-picker">
                     <div class="people-picker_wrap">
-                        <button class="league-spartan-bold" id="decrease">-</button>
+                        <button type="button" class="league-spartan-bold" id="decrease"><img src="./images/icons/icon-minus.svg" alt=""></button>
                         <div>
                             <span class="league-spartan-bold" id="people-count">4</span>
                             <span class="league-spartan-bold"> people</span>
                         </div>
-                        <button class="league-spartan-bold" id="increase">+</button>
+                        <button type="button" class="league-spartan-bold" id="increase"><img src="./images/icons/icon-plus.svg" alt=""></button>
                     </div>
                 </div>
 
-                <button class="league-spartan-semi-bold booking_submit" id="booking_submit">
-                    BOOK TABLE
-                </button>
+                <button type="submit" class="league-spartan-semi-bold booking_submit" id="booking_submit">make reservation</button>
 
             </form>
         </section>
-        <section class="decorations">
-            <div class="decorations_figure"></div>
-            <div class="decorations_humburger"></div>
-        </section>
+        <section class="decorations"></section>
     </main>
 
-    <!-- <footer>
-        <article class="logotype">
-            <a href="./index.html">
-                <img src="./images/logo.svg" alt="logotype dine">
-            </a>
-        </article>
-        <article class="restaurant_info_city">
-            <a href="https://www.google.com/maps/search/Marthwaite%2C+Sedbergh%2C+Cumbria">
-                <address class="league-spartan-regular">Marthwaite, Sedbergh<br>Cumbria<br></address>
-            </a>
-            <a href="tel:+00441234567" class="league-spartan-regular">+00 44 123 4567</a>
-        </article>
-        <article class="restaurant_info_time">
-            <p class="league-spartan-regular">OPEN TIMES<br>
-            <time>MON - FRI: 09:00 AM - 10:00 PM</time><br>
-            <time>SAT - SUN: 09:00 AM - 11:30 PM</time></p>
-        </article>
-    </footer> -->
-
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/booking.js"></script>
 </body>
 </html>
