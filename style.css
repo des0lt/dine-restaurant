@@ -200,7 +200,7 @@ header {
         width: 61%;
         height: 320px;
         background-color: #5C6779;
-        opacity: 7.74%;
+        opacity: 0.07;
         border-radius: 0 100px 0 0;
     }
 }
@@ -248,7 +248,7 @@ header {
         width: 61%;
         height: 320px;
         background-color: #5C6779;
-        opacity: 7.74%;
+        opacity: 0.07;
         border-radius: 100px 0 0 0;
     }
 }
@@ -322,15 +322,30 @@ header {
         width: 100%;
         height: 1px;
         background-color: #fff;
-        opacity: 14.94%;
+        opacity: 0.15;
     }
 }
 
 .family {
     position: relative;
     padding: 160px 0;
-    & .restaurant_descr_img_wrap {
+    & .slider {
         margin-top: 0px;
+        & div {
+            width: 540px;
+            height: 600px;
+            background-size: cover;
+            box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+            &:nth-child(1) {
+                background-image: url('./images/homepage/family-gathering-desktop@2x.jpg');
+            }
+            &:nth-child(2) {
+                background-image: url('./images/homepage/special-events-desktop@2x.jpg');
+            }
+            &:nth-child(3) {
+                background-image: url('./images/homepage/social-events-desktop@2x.jpg');
+            }
+        }
         &::before {
             content: '';
             position: absolute;
@@ -368,10 +383,6 @@ header {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            & article {
-                position: relative;
-                gap: 0;
-            }
             & li {
                 position: relative;
                 list-style-type: none;
@@ -446,39 +457,41 @@ footer {
     & .logotype {
         grid-column-start: 1;
     }
-    & .restaurant_info_city {
+    & .footer_wrap {
+        display: flex;
         grid-column-start: 4;
-        grid-column-end: 7;
-        & p {
-            width: 100%;
-            font-size: 14px;
-            line-height: 28px;
-            letter-spacing: 2px;
-            color: #fff;
-        }
-        & a {
-            text-decoration: none;
-            color: #fff;
-            width: 100%;
-            font-size: 14px;
-            line-height: 28px;
-            letter-spacing: 2px;
+        grid-column-end: 13;
+        gap: 200px;
+        & .restaurant_info_city {
             text-transform: uppercase;
-            & address {
-                font-style: normal;
+            & p {
+                width: 100%;
+                font-size: 14px;
+                line-height: 28px;
+                letter-spacing: 2px;
+                color: #fff;
+            }
+            & a {
+                text-decoration: none;
+                color: #fff;
+                width: 100%;
+                font-size: 14px;
+                line-height: 28px;
+                letter-spacing: 2px;
+                & address {
+                    font-style: normal;
+                }
             }
         }
-    }
-    & .restaurant_info_time {
-        text-transform: uppercase;
-        grid-column-start: 8;
-        grid-column-end: 13;
-        & p {
-            width: 100%;
-            font-size: 14px;
-            line-height: 28px;
-            letter-spacing: 2px;
-            color: #fff;
+        & .restaurant_info_time {
+            text-transform: uppercase;
+            & p {
+                width: 100%;
+                font-size: 14px;
+                line-height: 28px;
+                letter-spacing: 2px;
+                color: #fff;
+            }
         }
     }
 }
@@ -668,5 +681,226 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         z-index: -1;
+    }
+}
+
+@media (max-width: 1400px) {
+    section, header, footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    header {
+        width: 100%;
+        min-height: 992px;
+        padding: 0 98px;
+        background-image: url('images/homepage/hero-bg-tablet@2x.jpg');
+        & .logo { 
+            width: 103px;
+            margin-top: 371px;
+            align-self: center;
+            margin-bottom: 38px;
+        }
+        & .restaurant_main_info {
+            text-align: center;
+            width: 100%;
+            align-items: center;
+            gap: 52px;
+            & div {
+                gap: 20px;
+            }
+            & h1 {
+                font-size: 48px;
+                line-height: 64px;
+                letter-spacing: -0.6px;
+            }
+            & p {
+                width: 100%;
+            }
+        }
+    }
+
+    .restaurant_descr {
+        padding: 0 98px;
+        & .restaurant_descr_wrap {
+            & .restaurant_descr_text_wrap {
+                background-position-x: center;
+                padding-top: 39px;
+            }
+        }
+    }
+
+    .place {
+        align-items: center;
+        & .restaurant_descr_img_wrap {
+            width: 100%;
+            height: 360px;
+            margin-top: -96px;
+        }
+        & .restaurant_descr_wrap {
+            width: 457px;
+            text-align: center;
+            margin-top: 56px;
+            & div {
+                gap: 27px;
+            }
+        }
+        &::before {
+            left: 0;
+            top: 100px;
+            width: 50%;
+        }
+    }
+
+    .sourced {
+        align-items: center;
+        margin-top: 118px;
+        margin-bottom: 0;
+        padding-bottom: 118px;
+        & .restaurant_descr_img_wrap {
+            width: 100%;
+            height: 360px;
+            background-image: url("./images/homepage/locally-sourced-tablet@2x.jpg");
+            order: 1;
+            &::before {
+                transform: translateY(-100%) translateX(-66%);
+            }
+        }
+        & .restaurant_descr_wrap {
+            text-align: center;
+            order: 2;
+            & .restaurant_descr_text_wrap {
+                margin-top: 56px;
+                width: 457px;
+            }
+        }
+        &::before {
+            bottom: 0;
+            width: 50%;
+        }
+    }
+
+    .menu {
+        padding: 96px 98px;
+        align-items: center;
+        text-align: center;
+        & .restaurant_descr_wrap {
+            & .restaurant_descr_text_wrap {
+                padding-top: 36px;
+                width: 445px;
+            }
+        }
+        & .restaurant_highlights {
+            margin-top: 54px;
+        }
+        & .restaurant_highlights_item {
+            text-align: start;
+        }
+    }
+    
+    .family {
+        position: relative;
+        padding: 120px 40px;
+        align-items: center;
+        text-align: center;
+        & .slider {
+            & div {
+                width: 573px;
+                height: 360px;
+                &:nth-child(1) {
+                    background-image: url('./images/homepage/family-gathering-tablet@2x.jpg');
+                }
+                &:nth-child(2) {
+                    background-image: url('./images/homepage/special-events-tablet@2x.jpg');
+                }
+                &:nth-child(3) {
+                    background-image: url('./images/homepage/social-events-tablet@2x.jpg');
+                }
+            }
+            &::before {
+                left: 0;
+                transform: translateY(-50%) translateX(-33%);
+            }
+        }
+        & .restaurant_descr_wrap {
+            width: 100%;
+            margin-top: 57px;
+            gap: 47px;
+            align-items: center;
+            & .section_slider {
+                gap: 60px;
+            }
+            & .restaurant_descr_text_wrap{
+                width: 457px;
+                order: 2;
+                padding-top: 0;
+            }
+            & a {
+                align-self: center;
+            }
+            & .restaurant_descr_text_selector {
+                width: 100%;
+                max-width: 700px;
+                order: 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                & li {
+                    width: 200px;
+                    display: inline;
+                }
+                & .active {
+                    & button {
+                        opacity: 100%;
+                    }
+                    &::before {
+                        top: 100%;
+                        left: 50%;
+                        transform: translateY(7px) translateX(-50%);
+                        width: 48px;
+                    }
+                }
+            }
+        }
+        &::before {
+            left: 0;
+            width: 50%;
+        }
+    }
+
+    .restaurant_reservation {
+        position: relative;
+        height: 272px;
+        background-image: url('images/homepage/ready-bg-tablet@2x.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+        padding: 72px 0 62px 0;
+        & div {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            gap: 24px;
+            & h1 {
+                font-size: 48px;
+                line-height: 48px;
+                color: #fff;
+            }
+        }
+    }
+    
+    footer {
+        padding: 64px;
+        height: 328px;
+        align-items: center;
+        & .logotype {
+            position: absolute;
+            left: 39px;
+        }
+        & .footer_wrap {
+            gap: 32px;
+            flex-direction: column;
+        }
     }
 }

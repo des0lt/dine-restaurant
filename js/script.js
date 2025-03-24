@@ -3,22 +3,24 @@ window.addEventListener('DOMContentLoaded', () => {
     function addFooter() {
         const footer = document.createElement('footer');
         footer.innerHTML = `
-        <article class="logotype">
+        <div class="logotype">
             <a href="./index.html">
                 <img src="./images/logo.svg" alt="logotype dine">
             </a>
-        </article>
-        <article class="restaurant_info_city">
-            <a href="https://www.google.com/maps/search/Marthwaite%2C+Sedbergh%2C+Cumbria">
-                <address>Marthwaite, Sedbergh<br>Cumbria<br></address>
-            </a>
-            <a href="tel:+00441234567">+00 44 123 4567</a>
-        </article>
-        <article class="restaurant_info_time">
-            <p>open times<br>
-            <time>mon - fri: 09:00 am - 10:00 pm</time><br>
-            <time>sat - sun: 09:00 am - 11:30 pm</time></p>
-        </article>
+        </div>
+        <div class="footer_wrap">
+            <article class="restaurant_info_city">
+                <a href="https://www.google.com/maps/search/Marthwaite%2C+Sedbergh%2C+Cumbria">
+                    <address>Marthwaite, Sedbergh<br>Cumbria<br></address>
+                </a>
+                <a href="tel:+00441234567">+00 44 123 4567</a>
+            </article>
+            <article class="restaurant_info_time">
+                <p>open times<br>
+                <time>mon - fri: 09:00 am - 10:00 pm</time><br>
+                <time>sat - sun: 09:00 am - 11:30 pm</time></p>
+            </article>
+        </div>
         `
         document.body.appendChild(footer);
     }
@@ -28,7 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //slider
 
     const slideSelectors = document.querySelectorAll('.slider_selector'),
-        slideImaged = document.querySelectorAll('.slider img'),
+        slideImaged = document.querySelectorAll('.slider div'),
         slideSelectorsParent = document.querySelectorAll('.restaurant_descr_text_selector li'),
         slideSectionsTitle = document.querySelectorAll('.section_slider h2');
         slideSectionsParagraph = document.querySelectorAll('.section_slider p');
