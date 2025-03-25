@@ -163,7 +163,7 @@ header {
     & .restaurant_descr_img_wrap {
         width: 540px;
         height: 720px;
-        box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.503223);
+        box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
         margin-top: -70px;
         background-image: url("./images/homepage/enjoyable-place-desktop@2x.jpg");
         background-repeat: no-repeat;
@@ -529,6 +529,9 @@ footer {
             line-height: 30px;
             letter-spacing: 0px;
         }
+        & a {
+            display: none;
+        }
     }
     & .reservations_form {
         z-index: 100;
@@ -693,12 +696,13 @@ footer {
 
     header {
         width: 100%;
-        min-height: 992px;
+        min-height: 1142px;
         padding: 0 98px;
         background-image: url('images/homepage/hero-bg-tablet@2x.jpg');
+        background-position-x: center;
         & .logo { 
             width: 103px;
-            margin-top: 371px;
+            margin-top: 571px;
             align-self: center;
             margin-bottom: 38px;
         }
@@ -734,12 +738,15 @@ footer {
     .place {
         align-items: center;
         & .restaurant_descr_img_wrap {
+            background-image: url("./images/homepage/enjoyable-place-tablet@2x.jpg");
             width: 100%;
-            height: 360px;
+            max-width: 573px;
+            height: auto;
+            aspect-ratio: 16 / 10;
             margin-top: -96px;
         }
         & .restaurant_descr_wrap {
-            width: 457px;
+            max-width: 457px;
             text-align: center;
             margin-top: 56px;
             & div {
@@ -760,11 +767,13 @@ footer {
         padding-bottom: 118px;
         & .restaurant_descr_img_wrap {
             width: 100%;
-            height: 360px;
+            max-width: 573px;
+            height: auto;
+            aspect-ratio: 16 / 10;
             background-image: url("./images/homepage/locally-sourced-tablet@2x.jpg");
             order: 1;
             &::before {
-                transform: translateY(-100%) translateX(-66%);
+                transform: translateY(50%) translateX(-66%);
             }
         }
         & .restaurant_descr_wrap {
@@ -772,7 +781,7 @@ footer {
             order: 2;
             & .restaurant_descr_text_wrap {
                 margin-top: 56px;
-                width: 457px;
+                max-width: 457px;
             }
         }
         &::before {
@@ -788,7 +797,7 @@ footer {
         & .restaurant_descr_wrap {
             & .restaurant_descr_text_wrap {
                 padding-top: 36px;
-                width: 445px;
+                max-width: 445px;
             }
         }
         & .restaurant_highlights {
@@ -805,9 +814,16 @@ footer {
         align-items: center;
         text-align: center;
         & .slider {
+            width: 90%;
+            height: auto;
+            aspect-ratio: 16 / 10;
+            margin: 0 58px;
+            align-items: center;
+            max-width: 573px;
             & div {
-                width: 573px;
-                height: 360px;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16 / 10;
                 &:nth-child(1) {
                     background-image: url('./images/homepage/family-gathering-tablet@2x.jpg');
                 }
@@ -832,7 +848,7 @@ footer {
                 gap: 60px;
             }
             & .restaurant_descr_text_wrap{
-                width: 457px;
+                max-width: 457px;
                 order: 2;
                 padding-top: 0;
             }
@@ -847,8 +863,11 @@ footer {
                 flex-direction: row;
                 justify-content: space-between;
                 & li {
-                    width: 200px;
+                    width: 206px;
                     display: inline;
+                    & button {
+                        font-size: 17px;
+                    }
                 }
                 & .active {
                     & button {
@@ -902,5 +921,385 @@ footer {
             gap: 32px;
             flex-direction: column;
         }
+    }
+
+    .reservations {
+        padding: 56px 39px 0 39px;
+        background-image: url('./images/booking/hero-bg-tablet@2x.jpg');
+        align-items: center;
+        & header {
+            align-self: self-start;
+            padding: 0;
+            margin: 0;
+        }
+        & .reservations_info {
+            text-align: center;
+            max-width: 900px;
+            gap: 12px;
+            margin-top: 70px;
+            & h1 {
+                font-size: 48px;
+                line-height: 64px;
+                letter-spacing: -0.6px;
+            }
+            & p {
+                width: 100%;
+                padding: 0 58px;
+            }
+        }
+        & .reservations_form {
+            margin-top: 38px;
+        }
+    }
+
+    .decorations {
+        min-height: 435px;
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    header {
+        min-height: 992px;
+        & .logo { 
+            margin-top: 371px;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    header {
+        min-height: 748px;
+        padding: 0 24px;
+        background-image: url('images/homepage/hero-bg-mobile@2x.jpg');
+        & .logo { 
+            margin-top: 232px;
+        }
+        & .restaurant_main_info {
+            & h1 {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.4px;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0px;
+                width: 100%;
+            }
+        }
+    }
+
+    .restaurant_descr {
+        padding: 0 24px;
+    }
+
+    .place {
+        & .restaurant_descr_img_wrap {
+            background-image: url("./images/homepage/enjoyable-place-mobile@2x.jpg");
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3 / 4;
+            margin-top: -72px;
+        }
+        & .restaurant_descr_wrap {
+            max-width: 457px;
+            margin-top: 48px;
+            & div {
+                width: 100%;
+                & h2 {
+                    font-size: 32px;
+                    line-height: 40px;
+                    letter-spacing: -0.4px;
+                }
+                & p {
+                    width: 100%;
+                    font-size: 16px;
+                }
+            }
+        }
+        &::before {
+            display: none;
+        }
+    }
+
+    .sourced {
+        margin-top: 101px;
+        padding-bottom: 101px;
+        & .restaurant_descr_img_wrap {
+            aspect-ratio: 3 / 4;
+            background-image: url("./images/homepage/locally-sourced-mobile@2x.jpg");
+            box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+            &::before {
+                display: none;
+            }
+        }
+        & .restaurant_descr_wrap {
+            & .restaurant_descr_text_wrap {
+                margin-top: 48px;
+                & h2 {
+                    font-size: 32px;
+                    line-height: 40px;
+                    letter-spacing: -0.4px;
+                }
+                & p {
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+        &::before {
+            display: none;
+        }
+    }
+
+    .menu {
+        padding: 72px 24px;
+        align-items: center;
+        text-align: center;
+        gap: 85px;
+        & .restaurant_descr_wrap {
+            & .restaurant_descr_text_wrap {
+                padding-top: 36px;
+                max-width: 445px;
+                & h2 {
+                    font-size: 32px;
+                    line-height: 40px;
+                    letter-spacing: -0.4px;
+                }
+                & p {
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+
+        & .restaurant_highlights {
+            margin-top: 0;
+        }
+        & .restaurant_highlights_item {
+            flex-direction: column;
+            gap: 36px;
+            text-align: center;
+            height: auto;
+            margin-bottom: 54px;
+            & .restaurant_highlights_item_img {
+                display: flex;
+                height: auto;
+                width: 100%;
+                aspect-ratio: 4 / 3;
+                & img {
+                    width: 100%;
+                    aspect-ratio: 4 / 3;
+                }
+            }
+            & .restaurant_highlights_item_text {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+                align-items: center;
+                & p {
+                    width: 85%;
+                }
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .family {
+        padding: 80px 24px 124px 24px;
+        & .slider {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            & div {
+                aspect-ratio: 3 / 4;
+                &:nth-child(1) {
+                    background-image: url('./images/homepage/family-gathering-mobile@2x.jpg');
+                }
+                &:nth-child(2) {
+                    background-image: url('./images/homepage/special-events-mobile@2x.jpg');
+                }
+                &:nth-child(3) {
+                    background-image: url('./images/homepage/social-events-mobile@2x.jpg');
+                }
+            }
+            &::before {
+                display: none;
+            }
+        }
+        & .restaurant_descr_wrap {
+            gap: 30px;
+            & .section_slider {
+                gap: 60px;
+            }
+            & div {
+                gap: 13px;
+            }
+            & .restaurant_descr_text_wrap{
+                align-items: center;
+                & h2 {
+                    font-size: 32px;
+                    line-height: 40px;
+                    letter-spacing: -0.4px;
+                }
+                & p {
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 26px;
+                    letter-spacing: 0px;
+                }
+            }
+            & .restaurant_descr_text_selector {
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+            }
+        }
+        &::before {
+            display: none;
+        }
+    }
+
+    .restaurant_reservation {
+        height: auto;
+        background-image: url('images/homepage/ready-bg-mobile@2x.jpg');
+        padding: 84px 0 80px 0;
+        & div {
+            gap: 20px;
+            text-align: center;
+            & h1 {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.4px;
+            }
+        }
+    }
+
+    footer {
+        padding: 80px 24px 78px 24px;
+        height: auto;
+        gap: 42px;
+        & .logotype {
+            position: static;
+            left: 39px;
+        }
+        & .footer_wrap {
+            text-align: center;
+            & div {
+                display: inline;
+            }
+        }
+    }
+
+    .reservations {
+        padding: 56px 24px 0 24px;
+        background-image: url('./images/booking/hero-bg-mobile@2x.jpg');
+        & header {
+            align-self: center;
+        }
+        & .reservations_info {
+            margin-top: 44px;
+            & h1 {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.4px;
+            }
+            & p {
+                width: 100%;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0px;
+                padding: 0; 
+            }
+            & a {
+                display: flex;
+                margin-top: 6px;
+                align-self: center;
+            }
+        }
+        & .reservations_form {
+            padding: 34px 32px 32px 32px;
+            margin-top: 91px;
+            width: 100%;
+            & input, select {
+                padding: 0 0px 15px 14px;
+            }
+            & .time-picker, .date-picker {
+                height: auto;
+                gap: 8px;
+                flex-direction: column;
+                & label {
+                    align-self: flex-start;
+                }
+                & .date-picker_wrap, .time-picker_wrap {
+                    & input {
+                        width: 73px;
+                        min-width: 73px;
+                        max-width: 80px;
+                        &:last-child {
+                            max-width: 97px;
+                        }
+                    }
+                    & select {
+                        padding: 0 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .decorations {
+        min-height: 534px;
+    }
+
+}
+
+@media (max-width: 370px) {
+    .reservations {
+        & .reservations_form {
+            width: 100%;
+            & .time-picker, .date-picker {
+                & label {
+                    align-self: center;
+                }
+                & .date-picker_wrap, .time-picker_wrap {
+                    flex-direction: column;
+                    & input {
+                        width: 100%;
+                        min-width: auto;
+                        max-width: 100%;
+                        &:last-child {
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                    & select {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+            & .people-picker {
+                & .people-picker_wrap {
+                    padding: 0 19px 16px 19px;
+                }
+            }
+        }
+    }
+
+    .decorations {
+        min-height: 800px;
     }
 }

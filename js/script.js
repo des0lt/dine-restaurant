@@ -62,17 +62,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     slideSelectors.forEach(item => {
         item.addEventListener('click', (e) => {
+            e.preventDefault();
+            
             const slideTo = parseInt(e.target.getAttribute('data-slide-to')) - 1;
 
             slideImaged.forEach((img, i) => {
                 if (i === slideTo) {
                     showImg(img, slideTo);
                     slideSelectorsParent[i].classList.add('active');
-                    showText(slideSectionsTitle[i], slideSectionsParagraph[i], i)
-                    if (i === 1 || i === 2) {
-                        slideWrap.style.gap = '30px';
-                    } else {
-                        slideWrap.style.gap = '60px';
+                    showText(slideSectionsTitle[i], slideSectionsParagraph[i], i);
+                    if (window.matchMedia("(min-width: 388px)").matches) {
+                        if (i === 1 || i === 2 ) {
+                            slideWrap.style.gap = '30px';
+                        } else {
+                            slideWrap.style.gap = '60px';
+                        }
                     }
                 } else {
                     hideImg(img, slideTo);
