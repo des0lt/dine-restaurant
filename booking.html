@@ -41,15 +41,24 @@
                 <a href="#reservations_form" class="booking_link">RESERVE PLACE</a>
             </article>
 
-            <form class="reservations_form" id="reservations_form">
+            <form class="reservations_form error-state" id="reservations_form">
 
                 <div class="filling-data">
-                    <input required type="text" placeholder="Name">
-                    <input required type="email" placeholder="Email">
+                    <div>
+                        <input required type="text" placeholder="Name" class>
+                        <p class="error-msg name-p">This field is required</p>
+                    </div>
+                    <div>
+                        <input required type="email" placeholder="Email" class>
+                        <p class="error-msg email-p">This field is required</p>
+                    </div>
                 </div>
 
                 <div class="date-picker">
-                    <label for="date">Pick a date</label>
+                    <div>
+                        <label for="date">Pick a date</label>
+                        <p class="error-msg">This field is incomplete</p>
+                    </div>
                     <div class="date-picker_wrap">
                         <input id="date" required type="text" placeholder="MM" maxlength="2">
                         <input required type="text" placeholder="DD" maxlength="2">
@@ -58,7 +67,10 @@
                 </div>
 
                 <div class="time-picker">
-                    <label for="time">Pick a time</label>
+                    <div>
+                        <label for="time">Pick a time</label>
+                        <p class="error-msg">This field is incomplete</p>
+                    </div>
                     <div class="time-picker_wrap">
                         <input id="time" required type="text" placeholder="09" maxlength="2">
                         <input required type="text" placeholder="00" maxlength="2">
@@ -71,12 +83,12 @@
 
                 <div class="people-picker">
                     <div class="people-picker_wrap">
-                        <button type="button" class="league-spartan-bold" id="decrease"><img src="./images/icons/icon-minus.svg" alt=""></button>
+                        <button type="button" class="league-spartan-bold" id="decrease"><img src="./images/icons/icon-minus.svg" alt="" id="decrease"></button>
                         <div>
                             <span class="league-spartan-bold" id="people-count">4</span>
                             <span class="league-spartan-bold"> people</span>
                         </div>
-                        <button type="button" class="league-spartan-bold" id="increase"><img src="./images/icons/icon-plus.svg" alt=""></button>
+                        <button type="button" class="league-spartan-bold" id="increase"><img src="./images/icons/icon-plus.svg" alt="" id="increase"></button>
                     </div>
                 </div>
 
