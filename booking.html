@@ -51,29 +51,30 @@
                     <div>
                         <input required type="email" placeholder="Email" class>
                         <p class="error-msg email-p">This field is required</p>
+                        <p class="error-msg email-check">Enter your email in the format: name@example.com</p>
                     </div>
                 </div>
 
                 <div class="date-picker">
                     <div>
-                        <label for="date">Pick a date</label>
+                        <label for="mounth">Pick a date</label>
                         <p class="error-msg">This field is incomplete</p>
                     </div>
                     <div class="date-picker_wrap">
-                        <input id="date" required type="text" placeholder="MM" maxlength="2">
-                        <input required type="text" placeholder="DD" maxlength="2">
-                        <input required type="text" placeholder="YYYY" maxlength="4">
+                        <input id="mounth" required type="text" placeholder="MM" maxlength="2">
+                        <input id="day" required type="text" placeholder="DD" maxlength="2">
+                        <input id="year" required type="text" placeholder="YYYY" maxlength="4">
                     </div>
                 </div>
 
                 <div class="time-picker">
                     <div>
-                        <label for="time">Pick a time</label>
+                        <label for="hours">Pick a time</label>
                         <p class="error-msg">This field is incomplete</p>
                     </div>
                     <div class="time-picker_wrap">
-                        <input id="time" required type="text" placeholder="09" maxlength="2">
-                        <input required type="text" placeholder="00" maxlength="2">
+                        <input id="hours" required type="text" placeholder="09" maxlength="2">
+                        <input id="minutes" required type="text" placeholder="00" maxlength="2">
                         <select>
                             <option class="time-picker_option">AM</option>
                             <option class="time-picker_option">PM</option>
